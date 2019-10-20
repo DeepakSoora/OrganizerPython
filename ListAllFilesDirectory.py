@@ -4,11 +4,12 @@ import shutil
 
 Unique_Main_Dict = {}
 
-def ListAllFiles(location):
-    fList = []
-    for root, directories, files in os.walk(location):
-        for filename in files:
-            fList.append(filename)
+def ListAllFiles(inpath):
+    # fList = []
+    # for root, directories, files in os.walk(location):
+    #     for filename in files:
+    #         fList.append(filename)
+    fList = [f for f in os.listdir(inpath) if os.path.isfile(os.path.join(inpath, f))]
     print(fList)
     return fList
 
