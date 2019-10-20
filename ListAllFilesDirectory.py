@@ -10,7 +10,6 @@ def ListAllFiles(location):
         for filename in files:
             fList.append(filename)
     print(fList)
-    print("hello")
     return fList
 
 def getUniqueFolderNames(fNames, loc):
